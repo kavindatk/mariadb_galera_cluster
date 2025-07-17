@@ -1,5 +1,17 @@
 # 01. MariaDB Galera Cluster 
 
+<p align="center">
+<picture>
+  <img alt="docker" src="https://github.com/kavindatk/mariadb_galera_cluster/blob/main/images/mariadb.png" width="200" height="125">
+</picture>
+<br/><br/>
+<picture>
+  <img alt="docker" src="https://github.com/kavindatk/mariadb_galera_cluster/blob/main/images/ubuntu-logo1.png" width="200" height="125">
+</picture>
+
+</p>
+
+
 ## Introduction
 
 In this article, I will explain how to set up a <b>MariaDB Galera Cluster</b>. The main reason for this setup is to support an upcoming article series where I’ll show how to build a <b>multi-master Big Data cluster</b>. This cluster will include three master nodes running tools like <b>Hadoop, Hive, Spark, ZooKeeper</b>, and many other components from <b>Apache Bigtop<b>.
