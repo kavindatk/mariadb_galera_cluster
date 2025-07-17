@@ -4,7 +4,6 @@
 <picture>
   <img alt="docker" src="https://github.com/kavindatk/mariadb_galera_cluster/blob/main/images/mariadb.png" width="200" height="125">
 </picture>
-<br/><br/>
 <picture>
   <img alt="docker" src="https://github.com/kavindatk/mariadb_galera_cluster/blob/main/images/ubuntu-logo1.png" width="200" height="125">
 </picture>
