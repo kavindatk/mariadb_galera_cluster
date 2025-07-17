@@ -1,0 +1,21 @@
+#
+# * Galera-related settings
+#
+# See the examples of server wsrep.cnf files in /usr/share/mysql
+# and read more at https://mariadb.com/kb/en/galera-cluster/
+
+[mysqld]
+bind-address=0.0.0.0
+binlog_format=ROW
+default_storage_engine=InnoDB
+innodb_autoinc_lock_mode=2
+
+# Galera settings
+[galera]
+wsrep_on=ON
+wsrep_provider=/usr/lib/galera/libgalera_smm.so
+wsrep_cluster_name="bigdata_galera_cluster"
+wsrep_cluster_address="gcomm://mariadb01,mariadb02,mariadb03"
+wsrep_node_name="mariadb01"
+wsrep_node_address="172.27.41.131"
+wsrep_sst_method=rsync
