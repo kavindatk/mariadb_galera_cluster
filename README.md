@@ -2,7 +2,7 @@
 
 ## Introduction
 
-### In this article, I will explain how to set up a MariaDB Galera Cluster. The main reason for this setup is to support an upcoming article series where I’ll show how to build a multi-master Big Data cluster. This cluster will include three master nodes running tools like Hadoop, Hive, Spark, ZooKeeper, and many other components from Apache Bigtop.
+In this article, I will explain how to set up a <b>MariaDB Galera Cluster</b>. The main reason for this setup is to support an upcoming article series where I’ll show how to build a multi-master Big Data cluster. This cluster will include three master nodes running tools like Hadoop, Hive, Spark, ZooKeeper, and many other components from Apache Bigtop.
 
 One important part of this setup is the Hive Metastore. I plan to use the Galera cluster to provide high availability for the Hive Metastore database. However, the current version of Hive does not support the latest versions of MariaDB. It only works with MariaDB versions below 10.6.
 
