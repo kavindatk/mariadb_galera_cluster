@@ -47,6 +47,10 @@ sudo apt-get update
 sudo apt-get install mariadb-server-10.6 mariadb-client-10.6
 ```
 
+```bash
+sudo apt-get install mariadb-server mariadb-client #This will install latest stable upto date version , in this case above steps not required 
+```
+
 ### Step 2: Configure the Master Node
 
 In this step, I selected one of my Ubuntu servers to act as the master node for the Galera cluster. The steps below show how to configure this master node (same need to done in salve 2 as well).
