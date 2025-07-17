@@ -127,5 +127,57 @@ sudo systemctl start mariadb
 
 
 
+### Step 4: Verify the Galera Cluster
+
+In this step, we’ll verify that the <b>Galera cluster is up and running</b> using the commands below.
+
+```bash
+
+mysql -u root -p -e "SHOW STATUS LIKE 'wsrep_cluster_size';"
+
++--------------------+-------+
+| Variable_name      | Value |
++--------------------+-------+
+| wsrep_cluster_size | 3     |
++--------------------+-------+
+
+mysql -u root -p -e "SHOW STATUS LIKE 'wsrep_cluster_status';"
+
++----------------------+---------+
+| Variable_name        | Value   |
++----------------------+---------+
+| wsrep_cluster_status | Primary |
++----------------------+---------+
+
+mysql -u root -p -e "SHOW STATUS LIKE 'wsrep_local_state_comment';"
+
++---------------------------+--------+
+| Variable_name             | Value  |
++---------------------------+--------+
+| wsrep_local_state_comment | Synced |
++---------------------------+--------+
+
+```
+
+
+You can log in to <b>any one node</b>, create a <b>schema, add some tables, and insert sample data</b>. Then, check the other nodes to make sure the data is synchronized across the cluster.
+
+You can also test the <b>fault tolerance</b> by shutting down one of the nodes. After performing the same checks, restart the node and confirm that it rejoins the cluster successfully.
+
+<picture>
+  <img alt="docker" src="https://github.com/kavindatk/mariadb_galera_cluster/blob/main/images/verify01.JPG" width="800" height="400">
+</picture>
+<picture>
+  <img alt="docker" src="https://github.com/kavindatk/mariadb_galera_cluster/blob/main/images/verify02.JPG" width="800" height="400">
+</picture>
+
+</br></br>
+
+In upcoming steps, I’ll show how to <b>connect this setup to Hive Metastore using HAProxy</b>. With HAProxy, you’ll also be able to <b>monitor cluster statistics</b>.
+
+
+
+
+
 
 
